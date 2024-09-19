@@ -167,11 +167,11 @@
         <h2 class="titulo">MEU <span>PORTIFOLIO.</span></h2>
         <div class="flex">
 
-          <div class="img-port" style="background-image: url(images/projetos-1.png);">
+          <div class="img-port" style="background-image: url(images/imagem.jpg);">
             <div class="overley">PROJETO 1</div>
           </div>
 
-          <div class="img-port" style="background-image: url(images/projetos-2.png);">
+          <div class="img-port" style="background-image: url(images/imagem.jpg);">
             <div class="overley">PROJETO 2</div>
           </div>
 
