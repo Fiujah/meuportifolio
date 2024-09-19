@@ -8,7 +8,7 @@
     $para = 'renanfiujah@gmail.com';
     $assunto =  'NOVO CONTATO !';
     $corpo = "Nome: ".$nome."\n"."Email: ".$email."\n"."Telefone: "."\n"."Mensagem: ".$mensagem;
-    $cabecalho = "From: portifolio@fiuja.com"."\n"."Reply-to ".$email."\n"."X-Mailer:PHP/".phpversion();
+    $cabecalho = "From: renanfiujah@gmail.com"."\n"."Reply-to ".$email."\n"."X-Mailer:PHP/".phpversion();
 
     if(mail($para,$assunto,$corpo,$cabecalho)){
         echo("Mensagem enviada com sucesso!");
