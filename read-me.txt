@@ -1,0 +1,46 @@
+OBS: sempre adicionar id=""
+
+Modelo de Caixa - Box Model
+1. Conteúdo - Content
+2. Espaço de Preenchimento - Padding
+3. Borda - Border
+4. Margem - Margin
+
+
+HTML:
+
+<p> Parágrafo </p> 
+<div> Divisão </div> 
+<title> Título </title> 
+<head> Cabeça </head> Prioridade 1
+<body> Corpo </body> Prioridade 2
+<header> Cabeçalho </header> Prioridaded 3
+<main> Principal </main> Prioridade 4
+<section> Seção </section>
+<img Imagem />
+<buttom> Botão </buttom> OBS: Pode se usar buttom*2 que adiciona 'X' botões automaticamente
+
+<link rel="stylesheet" href="./style.css" >
+
+HTML (Hypertext Markup Language) Tags:
+
+<html> - Define o início e o fim do documento HTML.
+<head> - Contém informações do cabeçalho do documento, como título e links para estilos.
+<title> - Define o título da página exibido na barra de título ou na guia do navegador.
+<body> - Contém o conteúdo principal do documento HTML.
+<h1> to <h6> - Cabeçalhos de diferentes níveis (1 sendo o maior e 6 o menor).
+<p> - Define um parágrafo.
+<a> - Cria um link.
+<img> - Insere uma imagem.
+<ul>, <ol>, <li> - Lista não ordenada, lista ordenada e itens de lista, respectivamente.
+<div> - Define uma divisão ou seção no documento.
+<span> - Define uma pequena seção em linha no documento.
+<input> - Cria um campo de entrada, como um campo de texto ou uma caixa de seleção.
+<form> - Define um formulário HTML para entrada de dados do usuário.
+<table>, <tr>, <td>, <th> - Elementos para criar tabelas.
+<br> - Insere uma quebra de linha.
+<hr> - Insere uma linha horizontal.
+
+CSS:
+
+
