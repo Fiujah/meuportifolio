@@ -1,0 +1,6 @@
+cd caminho/do/seu/repositorio
+git status
+git add .
+git commit -m "Alteração do email"
+git pull origin master
+git push origin master
