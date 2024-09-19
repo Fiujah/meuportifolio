@@ -374,6 +374,9 @@ footer .line-footer p i{
 footer .line-footer p a {
     color: #fff;
 }
+.btn-abrir-menu{
+display: none;
+}
 
 @media screen and (max-width: 1020px){
     /* CLASSES GERAIS*/
@@ -390,6 +393,10 @@ footer .line-footer p a {
 
 
     /*CABECALHO */
+    .btn-abrir-menu{
+        display: block;
+    }
+    
     header{ 
         padding: 20px 4%;
     }
