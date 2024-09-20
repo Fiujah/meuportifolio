@@ -97,6 +97,8 @@ header nav.menu-desktop ul li{
 .btn-abrir-menu i {
     color: #00FF08;
     font-size: 40px;
+    position: sticky;
+    top: 0;
 }
 .menu-mobile{
     background-color: #000;
@@ -405,6 +407,8 @@ display: none;
     /*CABECALHO */
     .btn-abrir-menu{
         display: block;
+        position: sticky;
+        top: 0;
     }
     
     header{ 
@@ -433,7 +437,11 @@ display: none;
     }
     /* ESPECIALIDADES */
     section.especialidades{
-        padding: 40px 8%;
+        padding: 20px 8%;
+    }
+
+    section.especialidades .flex{
+        gap: 5px;
     }
 
     /* SOBRE */
