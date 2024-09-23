@@ -275,39 +275,99 @@ section.portifolio{
 }
 
 section.portifolio .flex{
-    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 4vh;
     margin-top: 60px;
 }
+
 .img-port{
-    width: 460px;
-    height: 300px;
+    width: 360px;
+    height: 200px;
     background-color: #00FF08;
     background-size: cover;
     background-position: 100% 0%;
     transition: 8s;
     cursor: pointer;
-    border-radius: 40px;
+    border-radius: 5px;
     position: relative;
+
+    cursor: pointer;
+    transition: transform 0.4s ease; 
 }
+.img-port img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para Imagem Centralizada */
+.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(3.1); /* Centraliza e expande */
+    z-index: 1000; /* Traz a imagem para frente */
+    box-shadow: 0 0 5px #fff; /* Sombra para destaque */
+    max-width: 90%; /* Limita a largura da imagem a 90% da largura da tela */
+    max-height: 90%; /* Limita a altura da imagem a 90% da altura da tela */
+}
+/* Estilos para Overlay */
+.overlay-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    z-index: 999; /* Coloca o overlay atrás da imagem expandida */
+    display: none; /* Inicia escondido */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+
 .img-port:hover{
-    background-position: 100% 100%;
+    background-position: 100% 0%;
 }
-.overley{
+
+.overley {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000b8;
-    border-radius: 40px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     font-weight: 600;
     opacity: 0;
+    color: #00FF08;
+    border: 3px solid #00FF08; /* Adicionando a borda */
+    padding: 10px; /* Espaçamento interno opcional */
+    /*text-shadow: 
+    -2px -2px 0 #FFF,  
+     2px -2px 0 #FFF,
+    -2px  2px 0 #FFF,
+     2px  2px 0 #FFF; /* Contorno em preto */
 }
-.overley:hover{
+.texto-bordado {
+    border: 2px solid #00FF08; /* Borda ao redor do texto */
+    padding: 5px; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada (opcional) */
+    color: #00FF08; /* Cor do texto */
+}
+.overley:hover {
     opacity: 1;
 }
 
@@ -488,7 +548,18 @@ display: none;
         text-align: center;
     }
 
-    /**/
+    /*IMAGEM EXPANDIDA*/
+    .expanded {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.2); /* Centraliza e expande */
+        z-index: 1000; /* Traz a imagem para frente */
+        box-shadow: 0 0 5px #fff; /* Sombra para destaque */
+        max-width: 75%; /* Limita a largura da imagem a 90% da largura da tela */
+        height: 100%; /* Limita a altura da imagem a 90% da altura da tela */
+    }
+
     /**/
     /**/
     /**/
