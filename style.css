@@ -72,7 +72,7 @@ header > .interface{
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    z-index: 99999999;
+    z-index: 99999988;
     height:110px;
     background-color: #000;
     left: 0;
@@ -88,7 +88,7 @@ section.divisao{
     right: 0;
     height: 110PX;
     padding: 10px 0%; 
-    z-index: 9999999;
+    z-index: 99999977;
     box-shadow: 0 0 20px 1px #ffffff1d;
     background-color: #000;
 
@@ -331,11 +331,11 @@ section.portifolio .flex{
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(3.1); /* Centraliza e expande */
-    z-index: 1000; /* Traz a imagem para frente */
+    transform: translate(-50%, -50%) scale(2.9); /* Centraliza e expande */
+    z-index: 99999999999999; /* Traz a imagem para frente */
     box-shadow: 0 0 5px #fff; /* Sombra para destaque */
-    max-width: 90%; /* Limita a largura da imagem a 90% da largura da tela */
-    max-height: 90%; /* Limita a altura da imagem a 90% da altura da tela */
+    max-width: 80%; /* Limita a largura da imagem a 90% da largura da tela */
+    max-height: 80%; /* Limita a altura da imagem a 90% da altura da tela */
 }
 /* Estilos para Overlay */
 .overlay-fullscreen {
@@ -594,11 +594,12 @@ display: none;
         position: fixed;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%) scale(1.2); /* Centraliza e expande */
-        z-index: 1000; /* Traz a imagem para frente */
+        transform: translate(-50%, -50%) scale(1); /* Centraliza e expande */
+        z-index: 99999999; /* Traz a imagem para frente */
         box-shadow: 0 0 5px #fff; /* Sombra para destaque */
         max-width: 75%; /* Limita a largura da imagem a 90% da largura da tela */
         height: 100%; /* Limita a altura da imagem a 90% da altura da tela */
+        
     }
 
     /**/

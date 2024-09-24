@@ -1,6 +1,7 @@
 cd caminho/do/seu/repositorio
 git status
 git add .
-git commit -m "adicionado clicks aos menus"
+git commit -m "ultimas estilizações e adicionado mentoria como habilidades "
 git pull origin master
 git push origin master
+git push origin master --force
