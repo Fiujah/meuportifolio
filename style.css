@@ -52,22 +52,47 @@ h2.titulo span{
     font-size: 15px;
     cursor: pointer;
     margin:  0 5px;
-    transition: 0.2s;
-
+    transition: 0.2s
 }
 
 
 
 /* Estilo do Cabeçalho */
 header{ 
-    padding: 40px 4%;
+    padding: 35px 4%;
+    
+}
+header .interface .logo img{
+    height: 100%;
+    width: 110px;
 }
 header > .interface{
+    margin: 20;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    z-index: 99999999;
+    height:110px;
+    background-color: #000;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
+/* ESTILO DA DIVISÃO */
+section.divisao{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 110PX;
+    padding: 10px 0%; 
+    z-index: 9999999;
+    box-shadow: 0 0 20px 1px #ffffff1d;
+    background-color: #000;
+
+}
 /* Links */
 header a{                           
     color: #5c5c5c;
@@ -97,8 +122,9 @@ header nav.menu-desktop ul li{
 .btn-abrir-menu i {
     color: #00FF08;
     font-size: 40px;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top: 30px;
+    right: 20px;
 }
 .menu-mobile{
     background-color: #000;
@@ -153,24 +179,17 @@ header nav.menu-desktop ul li{
     background-color: #00FF08;
     color: #000;
 }
-
-
 .txt-topo-site{
     color: #fff;
 }
-
-
 /* Topo do Site -- Texto, Foto Flutuante e Paragrafo */
-header .interface .logo img{
-    width: 125px;
-}
+
 section.topo-do-site{
     padding: 40px 4%;
 }
 section.topo-do-site .flex{
     align-items: center;
-    justify-content: center;
-    gap: 90px;
+    justify-content: center
 }
 .topo-do-site .txt-topo-site h1{
     color: #fff;
@@ -186,9 +205,13 @@ section.topo-do-site .flex{
     margin: 40px 0;
     font-size: 19px;
 }
+.topo-do-site .txt-topo-site p span{
+    color: #00FF08;
+    font-size: 19px;
+}
 
 .topo-do-site .img-topo-site img{
-    width: 100%;
+    width: 70%;
     position: relative;
     animation: flutuar 1.5s ease-in-out infinite alternate;
     
@@ -205,7 +228,7 @@ section.topo-do-site .flex{
 
 /* ESPECIALIDADES */
 section.especialidades{
-    padding: 40px 4%;
+    padding: 150px 4%;
 }
 section.especialidades .flex{
     gap: 60px;
@@ -216,6 +239,8 @@ section.especialidades .flex{
     margin: 45px 8px;
     border-radius: 25px;
     transition: .2s;
+    max-width: 50%;
+    max-height: 30%;
 }
 .especialidades .especialidades-box:hover{
     transform: scale(1.15);
@@ -232,23 +257,22 @@ section.especialidades .flex{
 
 /* SOBRE */
 section.sobre{
-    padding: 80px 4%;
+    padding: 140px 4%;
 }
 
 section.sobre .flex{
     align-items: center;
-    gap: 60px;
+    gap: 10px;
     justify-content: space-between;
 }
 .sobre .txt-sobre{
-    color: #FFF;
-
+    color: #FFF
 }
 
 .sobre .txt-sobre h2{
     font-size: 40px;
     line-height: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
 }
 .sobre .txt-sobre h2 span{
@@ -256,68 +280,127 @@ section.sobre .flex{
     display: block;
 }
 .sobre .txt-sobre p{
-    margin: 20px 0 ;
+    margin: 10px 0 ;
     text-align: justify;
+}
+.sobre .txt-sobre p span{
+    color: #00FF08;
 }
 
 .img-sobre img{
-    max-width: 360px; 
-    border-radius: 35px;
+    max-width: 320px; 
+    border-radius: 35px
 }
-
-
-
 
 /* ESTILO DO PORTIFÓLIO */
 section.portifolio{
-    padding: 80px 4%; 
-    box-shadow: 0 0 40px 10px #ffffff1d;
+    padding: 120px 4%
+    /*box-shadow: 0 0 40px 10px #ffffff1d; */
 }
 
 section.portifolio .flex{
-    justify-content: space-around;
-    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2vh;
+    margin-top: 20px; 
 }
+
 .img-port{
-    width: 460px;
-    height: 300px;
+    width: 360px;
+    height: 200px;
     background-color: #00FF08;
     background-size: cover;
     background-position: 100% 0%;
     transition: 8s;
     cursor: pointer;
-    border-radius: 40px;
+    border-radius: 5px;
     position: relative;
+
+    cursor: pointer;
+    transition: transform 0.4s ease; 
 }
+.img-port img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para Imagem Centralizada */
+.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(3.1); /* Centraliza e expande */
+    z-index: 1000; /* Traz a imagem para frente */
+    box-shadow: 0 0 5px #fff; /* Sombra para destaque */
+    max-width: 90%; /* Limita a largura da imagem a 90% da largura da tela */
+    max-height: 90%; /* Limita a altura da imagem a 90% da altura da tela */
+}
+/* Estilos para Overlay */
+.overlay-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    z-index: 999; /* Coloca o overlay atrás da imagem expandida */
+    display: none; /* Inicia escondido */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+
 .img-port:hover{
-    background-position: 100% 100%;
+    background-position: 100% 0%;
 }
-.overley{
+
+.overley {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000b8;
-    border-radius: 40px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     font-weight: 600;
     opacity: 0;
+    color: #00FF08;
+    border: 3px solid #00FF08; /* Adicionando a borda */
+    padding: 10px; /* Espaçamento interno opcional */
+    /*text-shadow: 
+    -2px -2px 0 #FFF,  
+     2px -2px 0 #FFF,
+    -2px  2px 0 #FFF,
+     2px  2px 0 #FFF; /* Contorno em preto */
 }
-.overley:hover{
+.texto-bordado {
+    border: 2px solid #00FF08; /* Borda ao redor do texto */
+    padding: 5px; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada (opcional) */
+    color: #00FF08; /* Cor do texto */
+}
+.overley:hover {
     opacity: 1;
 }
 
 /* ESTILO FORMULÁRIO */
 section.formulario{
-    padding: 80px 4%;
+    padding: 130px 4%;
 
 }
 form {
-
     max-width: 500px;
     margin: 0 auto;
     display: flex;
@@ -389,6 +472,15 @@ footer .line-footer p a {
 .btn-abrir-menu{
 display: none;
 }
+/* ===================================================================*/
+/* ===================================================================*/
+/* ===================================================================*/
+/* ===================================================================*/
+/* ===================================================================*/
+/* ===================================================================*/
+/* ===================================================================*/
+/* ===================================================================*/
+
 
 @media screen and (max-width: 1020px){
     /* CLASSES GERAIS*/
@@ -425,7 +517,7 @@ display: none;
         gap: 40px;
     }
     section.topo-do-site{
-        padding: 20px 8%;
+        padding: 65px 8%;
     }
     .topo-do-site .txt-topo-site h1{
         font-size: 30px;
@@ -435,9 +527,9 @@ display: none;
         width: 100%;
 
     }
-    /* ESPECIALIDADES */
+    /* HABILIDADES */
     section.especialidades{
-        padding: 20px 8%;
+        padding: 150px 8%;
     }
 
     section.especialidades .flex{
@@ -446,7 +538,7 @@ display: none;
 
     /* SOBRE */
     section.sobre{
-        padding: 80px 8%;
+        padding: 150px 8%;
     }
 
     .sobre .txt-sobre h2{
@@ -462,11 +554,16 @@ display: none;
     .img-sobre img{
         width: 100%;
     }
+    
+    section.especialidades .interface .flex .especialidades-box{
+        padding: 10px 8%;
+        max-width: 1200px;
+    }
 
     
     /*PORTIFÓLIO*/
     section.portifolio{
-        padding: 80px 8%;
+        padding: 150px 8%;
     }
     .img-port{
         width: 100%;
@@ -478,6 +575,10 @@ display: none;
     section.portifolio .flex{
         gap: 60px;
     }
+       /*CONTATO*/
+       section.formulario{
+        padding: 150px 8%;
+    }
 
     /*RODAPÉ*/
     footer .flex{
@@ -488,7 +589,18 @@ display: none;
         text-align: center;
     }
 
-    /**/
+    /*IMAGEM EXPANDIDA*/
+    .expanded {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.2); /* Centraliza e expande */
+        z-index: 1000; /* Traz a imagem para frente */
+        box-shadow: 0 0 5px #fff; /* Sombra para destaque */
+        max-width: 75%; /* Limita a largura da imagem a 90% da largura da tela */
+        height: 100%; /* Limita a altura da imagem a 90% da altura da tela */
+    }
+
     /**/
     /**/
     /**/
